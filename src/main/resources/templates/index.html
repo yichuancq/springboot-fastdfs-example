@@ -1,0 +1,21 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/test.css"/>
+    <title>Test</title>
+</head>
+<body>
+<label title="">文件上传</label>
+<h3><span th:text="${msg}"></span></h3>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="upload">
+</form>
+
+<label title="">下载文件,请输入文件路径</label>
+<form name="download" action="/download" method="post">
+    <input type="text" name="filePath" accept="text/plain">
+    <input type="submit" value="download">
+</form>
+</body>
+</html>
